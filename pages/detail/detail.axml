@@ -1,0 +1,33 @@
+<view class="page-detail">
+  <image
+    class="banner-image"
+    src="{{property.banner}}"
+  />
+  <view class="detail-body">
+    <text class="detail-title">{{property.title}}</text>
+    <text class="detail-price">{{property.price}}</text>
+    <text class="detail-section-title">Description</text>
+    <text>{{property.description}}</text>
+    <text class="detail-section-title">Facilities</text>
+    <view class="detail-facilities">
+      <text a:for="{{property.facilities}}" class="detail-facility">{{item}}</text>      
+    </view>
+    <text class="detail-section-title">Gallery</text>
+    <swiper
+      indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}"
+      interval="{{interval}}"
+    >
+      <block a:for="{{property.images}}">
+        <swiper-item>
+          <image src="{{item}}" class="swiper-image"/>
+        </swiper-item>
+      </block>
+    </swiper>
+    <text class="detail-section-title">Terms and Conditions</text>
+    <text>{{property.terms_and_conditions}}</text>
+  </view>
+  <view class="detail-bottom-bar">
+    <button size="default" type="primary" onTap="bookProperty">Book Now</button>
+  </view>
+</view>
