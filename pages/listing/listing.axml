@@ -1,0 +1,25 @@
+<view class="page-listing">
+  <view class="search-bar">
+    <input 
+      class="search-input"
+      placeholder="Search properties..."
+      onBlur="onBlur"
+    />
+    <button class="button-list-view" onTap="changeLayout">
+      <image
+        class="button-image"
+        src="{{isListView ? '../../assets/grid.png' : '../../assets/list.png'}}"
+      />
+    </button>
+  </view>
+  <view a:if="{{properties.length > 0}}" class="{{isListView ? 'layout-list-view' : 'layout-grid'}}">
+    <view a:for="{{properties}}" class="card {{isListView ? 'card-list' : 'card-grid'}}" onTap="navigateToDetail" id="{{item.id}}">
+      <image class="{{isListView ? 'card-img-list' : 'card-img-grid'}}" src="{{item.banner}}" />
+      <view class="card-body">
+        <text class="card-title">{{item.title}}</text>
+        <text>{{item.price}}</text>
+      </view>
+    </view>
+  </view>
+  <view a:else class="layout-not-found"> No Properties Found </view>
+</view>

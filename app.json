@@ -1,0 +1,29 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/listing/listing",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "titleBarColor": "#4285F4"
+  },
+  "tabBar": {
+    "textColor": "#404040",
+    "selectedColor": "#404040",
+    "backgroundColor": "#F5F5F9",
+    "items": [
+      {
+        "pagePath": "pages/home/home",
+        "name": "Home",
+        "icon": "assets/home.png",
+        "activeIcon": "assets/highlighted-home.png"
+      },
+      {
+        "pagePath": "pages/listing/listing",
+        "name": "Property List",
+        "icon": "assets/gear.png",
+        "activeIcon": "assets/highlighted-gear.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+.page-detail {
+  width: 100%;
+}
+
+.banner-image {
+  width: 100%;
+  height: 750rpx;
+}
+
+.detail-body {
+  padding: 5% 5% calc(80px + env(safe-area-inset-bottom)) 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 25rpx;
+}
+
+.detail-title {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.detail-price {
+  color: grey;
+  font-weight: bold;
+}
+
+.detail-section-title {
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.detail-facilities {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* max 3 per row */
+  gap: 20rpx;
+}
+
+.detail-facility {
+  background-color: #4285F4;
+  color: white;
+  padding: 20rpx;
+}
+
+.swiper-image {
+  width: 100%;
+}
+
+.detail-bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  color: white;
+  text-align: center;
+  padding: 30rpx;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+}
+
+.detail-bottom-bar button {
+  display: inline-block;
+  margin: 0 auto;
+  border: none;
+  font-size: larger;
+  border-radius: 30rpx;
+  width: 90%;
+}
